@@ -38,6 +38,13 @@ If the argument is '-', :program:`traffic_via` will filter standard
 input for Via headers. This modes supports only supports Via headers
 taht are enclosed by square brackets.
 
+There are no http header "Via" in default, you can add it through 
+"proxy.config.http.insert_request_via_str" add "proxy.config.http.insert_response_via_str" 
+config entry. If you download a file from traffic server, the http header via entry
+will show you a code like "[cMsSfW]". This is coded state for cache status.
+Typing "traffic_via "[cMsSfW]" in shell will show you the real state in human readble text.
+In a word, traffic_via is a Via http header decoder.
+
 Options
 =======
 
